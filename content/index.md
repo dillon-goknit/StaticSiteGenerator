@@ -4,14 +4,16 @@
 
 Here's the deal, **I like Tolkien**.
 
-> All that is gold does not glitter
+> "I am in fact a Hobbit in all but size."
+>
+> -- J.R.R. Tolkien
 
 ## Reasons I like Tolkien
 
-- You can spend years studying the legendarium and still not understand its depths
+- You can spend years studying the [legendarium](https://en.wikipedia.org/wiki/Hobbit) and still not understand its depths
 - It can be enjoyed by children and adults alike
 - Disney _didn't ruin it_
-- It created an entirely new genre of fantasy
+- It created an entirely new genre of [fantasy](https://en.wikipedia.org/wiki/Fantasy)
 
 ## My favorite characters (in order)
 
