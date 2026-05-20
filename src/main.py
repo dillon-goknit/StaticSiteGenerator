@@ -1,8 +1,11 @@
-from textnode import TextNode, TextType
+from copy_static import copy_directory
+from generate_page import generate_page
 
-print("hello world")
 
 def main():
-    print(TextNode(text="hello", text_type=TextType.TEXT, url=None))
+    copy_directory("static", "public")
+    generate_page("content/index.md", "template.html", "public/index.html")
 
-main()
+
+if __name__ == "__main__":
+    main()

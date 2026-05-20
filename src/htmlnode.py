@@ -43,3 +43,9 @@ class ParentNode(HTMLNode):
         if self.children is None or len(self.children) == 0:
             raise ValueError("children is required")
         return f"<{self.tag}{self.props_to_html()}>{self.children_to_html()}</{self.tag}>"
+
+    def children_to_html(self) -> str:
+        return "".join(child.to_html() for child in self.children)
+
+    def __repr__(self):
+        return f"ParentNode(tag={self.tag}, children={self.children}, props={self.props})"

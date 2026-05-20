@@ -85,6 +85,42 @@ class TestParentNode(unittest.TestCase):
         with self.assertRaises(ValueError):
             node.to_html()
 
+    def test_to_html_with_leaf_children(self):
+        node = ParentNode(
+            "div",
+            [LeafNode("p", "Hello"), LeafNode("p", "Goodbye")],
+        )
+        self.assertEqual(
+            node.to_html(),
+            "<div><p>Hello</p><p>Goodbye</p></div>",
+        )
+
+    def test_to_html_nested_parent(self):
+        node = ParentNode(
+            "article",
+            [
+                ParentNode(
+                    "section",
+                    [LeafNode("h1", "Title"), LeafNode("p", "Body")],
+                ),
+            ],
+        )
+        self.assertEqual(
+            node.to_html(),
+            "<article><section><h1>Title</h1><p>Body</p></section></article>",
+        )
+
+    def test_to_html_with_props(self):
+        node = ParentNode(
+            "ul",
+            [LeafNode("li", "one"), LeafNode("li", "two")],
+            {"class": "list"},
+        )
+        self.assertEqual(
+            node.to_html(),
+            '<ul class="list"><li>one</li><li>two</li></ul>',
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
