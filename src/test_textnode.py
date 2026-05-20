@@ -14,7 +14,7 @@ class TestTextNode(unittest.TestCase):
 
     def test_not_equal_different_text_type(self):
         node = TextNode("same text", TextType.BOLD)
-        node2 = TextNode("same text", TextType.ITALICS)
+        node2 = TextNode("same text", TextType.ITALIC)
         self.assertNotEqual(node, node2)
 
     def test_not_equal_different_text(self):
